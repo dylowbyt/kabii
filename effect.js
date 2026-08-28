@@ -28,6 +28,7 @@ $('document').ready(function(){
 			$('#play').fadeIn('slow');
 		});
 	});
+	
 	$('#play').click(function(){
 		var audio = $('.song')[0];
         audio.play();
@@ -58,6 +59,7 @@ $('document').ready(function(){
 			loopOne();
 		});
 	}
+	
 	function loopTwo() {
 		var randleft = 1000*Math.random();
 		var randtop = 500*Math.random();
@@ -65,6 +67,7 @@ $('document').ready(function(){
 			loopTwo();
 		});
 	}
+	
 	function loopThree() {
 		var randleft = 1000*Math.random();
 		var randtop = 500*Math.random();
@@ -72,6 +75,7 @@ $('document').ready(function(){
 			loopThree();
 		});
 	}
+	
 	function loopFour() {
 		var randleft = 1000*Math.random();
 		var randtop = 500*Math.random();
@@ -79,6 +83,7 @@ $('document').ready(function(){
 			loopFour();
 		});
 	}
+	
 	function loopFive() {
 		var randleft = 1000*Math.random();
 		var randtop = 500*Math.random();
@@ -94,6 +99,7 @@ $('document').ready(function(){
 			loopSix();
 		});
 	}
+	
 	function loopSeven() {
 		var randleft = 1000*Math.random();
 		var randtop = 500*Math.random();
@@ -106,11 +112,7 @@ $('document').ready(function(){
 		$('.balloon-border').animate({top:-500},8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b3').addClass('balloons-rotate-behaviour-two');
-		// $('#b4').addClass('balloons-rotate-behaviour-one');
-		// $('#b5').addClass('balloons-rotate-behaviour-one');
-		// $('#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b7').addClass('balloons-rotate-behaviour-one');
+
 		loopOne();
 		loopTwo();
 		loopThree();
@@ -175,7 +177,7 @@ $('document').ready(function(){
 		function msgLoop (i) {
 			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
 			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
+			$("p:nth-child("+i+")").fadeIn('slow').delay(5000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
@@ -187,7 +189,7 @@ $('document').ready(function(){
 			}			
 
 		});
-			// body...
+
 		}
 		
 		msgLoop(0);
